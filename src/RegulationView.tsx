@@ -17,6 +17,8 @@ import {
   TYPES,
   TYPE_LABEL,
   cardUrl,
+  deckDbUrl,
+  deckWikiUrl,
   levelClass,
   matches,
   meta,
@@ -119,7 +121,23 @@ function MetaTiers() {
               <div className="reg-tier-decks">
                 {t.decks.map(d => (
                   <div key={d.name} className="reg-deck">
-                    <span className="reg-deck-name">【{d.name}】</span>
+                    <span className="reg-deck-head">
+                      <a
+                        className="reg-deck-name"
+                        href={deckWikiUrl(d)}
+                        target="_blank"
+                        rel="noreferrer">
+                        【{d.name}】
+                      </a>
+                      <a
+                        className="reg-deck-db"
+                        href={deckDbUrl(d)}
+                        target="_blank"
+                        rel="noreferrer"
+                        aria-label={`${d.name}のカードを公式DBで探す`}>
+                        公式DB
+                      </a>
+                    </span>
                     {d.note && <span className="reg-deck-note">{d.note}</span>}
                   </div>
                 ))}
@@ -135,9 +153,14 @@ function MetaTiers() {
               <span className="reg-history-date">{ymd(h.from)}〜</span>
               <span className="reg-history-decks">
                 {h.top.map((d, i) => (
-                  <span key={d} className={`reg-history-deck rank-${i}`}>
+                  <a
+                    key={d}
+                    className={`reg-history-deck rank-${i}`}
+                    href={deckWikiUrl({name: d, note: ''})}
+                    target="_blank"
+                    rel="noreferrer">
                     {d}
-                  </span>
+                  </a>
                 ))}
               </span>
             </li>
@@ -149,6 +172,7 @@ function MetaTiers() {
             {meta.source.title}
           </Link>
           （Wikiの更新 {ymd(meta.source.modified)}、{ymd(meta.updated)} 確認）。{meta.note}
+          デッキ名は遊戯王カードWikiのデッキページ、「公式DB」はそのテーマのカード一覧へのリンクです。
         </Text>
       </VStack>
     </Card>

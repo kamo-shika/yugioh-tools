@@ -1,5 +1,5 @@
 import {describe, expect, it} from 'vitest';
-import {levelClass, matches, regulation, ymd} from './regulation';
+import {deckDbUrl, deckWikiUrl, levelClass, matches, regulation, ymd} from './regulation';
 
 describe('regulation', () => {
   it('データに禁止・制限・準制限が入っている', () => {
@@ -16,5 +16,14 @@ describe('regulation', () => {
     expect(ymd('2026-10-01')).toBe('2026/10/01');
     expect(levelClass('準制限')).toBe('lv-semi');
     expect(levelClass('制限解除')).toBe('lv-free');
+  });
+  it('デッキのリンク', () => {
+    expect(deckWikiUrl({name: 'エルフェンノーツ', note: ''})).toBe(
+      'https://yugioh-wiki.net/index.php?' + encodeURIComponent('【エルフェンノーツ】'),
+    );
+    const db = new URL(deckDbUrl({name: '光と闇の儀式', note: '', db: {text: true}}));
+    expect(db.searchParams.get('keyword')).toBe('光と闇の儀式');
+    expect(db.searchParams.get('stype')).toBe('2');
+    expect(new URL(deckDbUrl({name: 'トゥーン', note: ''})).searchParams.get('stype')).toBe('1');
   });
 });

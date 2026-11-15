@@ -26,6 +26,10 @@ export interface Regulation {
 export interface MetaDeck {
   name: string;
   note: string;
+  /** 遊戯王カードWikiのページ名が【name】と違うときだけ指定（【】込み） */
+  wiki?: string;
+  /** 公式DB検索の語が name と違うとき、または効果文で探すとき（text: true）だけ指定 */
+  db?: {keyword?: string; text?: boolean};
 }
 export interface Meta {
   updated: string;
@@ -52,6 +56,22 @@ export const cardUrl = (cid: string | null) =>
   cid
     ? `https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=2&cid=${cid}&request_locale=ja`
     : undefined;
+
+/** デッキの遊戯王カードWikiページ（例：【エルフェンノーツ】） */
+export const deckWikiUrl = (d: MetaDeck) =>
+  `https://yugioh-wiki.net/index.php?${encodeURIComponent(d.wiki ?? `【${d.name}】`)}`;
+
+/** 公式DBでテーマのカードを探す（既定はカード名検索、text: true なら効果文で検索） */
+export const deckDbUrl = (d: MetaDeck) =>
+  'https://www.db.yugioh-card.com/yugiohdb/card_search.action?' +
+  new URLSearchParams({
+    ope: '1',
+    sess: '1',
+    rp: '100',
+    keyword: d.db?.keyword ?? d.name,
+    stype: d.db?.text ? '2' : '1',
+    request_locale: 'ja',
+  }).toString();
 
 /** 2026-10-01 → 2026/10/01 */
 export const ymd = (d: string) => d.replaceAll('-', '/');
