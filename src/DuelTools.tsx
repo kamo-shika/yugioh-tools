@@ -117,23 +117,6 @@ export default function DuelTools({nav}: {nav: ReactNode}) {
       <header className="duel-bar">
         {nav}
         <div className="duel-bar-actions">
-          <div className="turn">
-            <button
-              type="button"
-              className="turn-step"
-              aria-label="ターンを戻す"
-              onClick={() => setState(s => ({...s, turn: Math.max(1, s.turn - 1)}))}>
-              −
-            </button>
-            <span className="turn-label">T{state.turn}</span>
-            <button
-              type="button"
-              className="turn-step"
-              aria-label="ターンを進める"
-              onClick={() => setState(s => ({...s, turn: s.turn + 1}))}>
-              ＋
-            </button>
-          </div>
           <Button label="履歴" variant="ghost" onClick={() => setHistoryOpen(true)} />
           <Button label="戻す" variant="secondary" onClick={() => setState(undoLp)} isDisabled={!hasUndo} />
           <Button

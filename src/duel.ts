@@ -11,14 +11,12 @@ export type DuelEvent =
 export interface DuelState {
   names: [string, string];
   lp: [number, number];
-  turn: number;
   log: DuelEvent[];
 }
 
 export const initialState = (names: [string, string] = ['自分', '相手']): DuelState => ({
   names,
   lp: [START_LP, START_LP],
-  turn: 1,
   log: [],
 });
 
