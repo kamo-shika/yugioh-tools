@@ -103,6 +103,13 @@ test('コインを投げると表か裏が出る', async ({page}) => {
   await expect(page.getByRole('dialog', {name: '結果'}).locator('.roll-label')).toHaveText(/^(表|裏)$/);
 });
 
+test('コインの表は太陽、裏は月の図柄', async ({page}) => {
+  await page.getByRole('button', {name: 'コインを投げる'}).click();
+  const dialog = page.getByRole('dialog', {name: '結果'});
+  await expect(dialog.getByRole('img', {name: '表（太陽）'})).toHaveCount(1);
+  await expect(dialog.getByRole('img', {name: '裏（月）'})).toHaveCount(1);
+});
+
 test('画面全体がスクロールせずに収まる', async ({page}) => {
   await expectNoScroll(page);
 });
