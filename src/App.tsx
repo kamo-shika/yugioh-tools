@@ -8,22 +8,25 @@ import {
 } from '@astryxdesign/core/SegmentedControl';
 import DuelTools from './DuelTools';
 import ProbabilityCalc from './ProbabilityCalc';
+import RegulationView from './RegulationView';
 
-type Tab = 'duel' | 'prob';
+type Tab = 'duel' | 'prob' | 'reg';
+const HASH: Record<Tab, string> = {duel: '#', prob: '#prob', reg: '#reg'};
 
 export default function App() {
   const [tab, setTab] = useState<Tab>(() =>
-    location.hash === '#prob' ? 'prob' : 'duel',
+    location.hash === '#prob' ? 'prob' : location.hash === '#reg' ? 'reg' : 'duel',
   );
   const change = (t: string) => {
     setTab(t as Tab);
-    history.replaceState(null, '', t === 'prob' ? '#prob' : '#');
+    history.replaceState(null, '', HASH[t as Tab]);
   };
 
   const nav = (
     <SegmentedControl label="ツール" value={tab} onChange={change}>
       <SegmentedControlItem value="duel" label="ライフ" />
       <SegmentedControlItem value="prob" label="初手確率" />
+      <SegmentedControlItem value="reg" label="規制・環境" />
     </SegmentedControl>
   );
 
@@ -32,10 +35,10 @@ export default function App() {
       {tab === 'duel' ? (
         <DuelTools nav={nav} />
       ) : (
-        <main className="page">
+        <main className={tab === 'reg' ? 'page reg-page' : 'page'}>
           <VStack gap={5}>
             {nav}
-            <ProbabilityCalc />
+            {tab === 'prob' ? <ProbabilityCalc /> : <RegulationView />}
           </VStack>
         </main>
       )}

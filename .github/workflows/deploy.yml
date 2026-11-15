@@ -5,6 +5,9 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+  # 規制・環境ページのデータ（公式DBのリミットレギュレーション）を毎週取り直して再デプロイする
+  schedule:
+    - cron: "23 22 * * 0" # 毎週月曜 7:23（日本時間）
 
 permissions:
   contents: read
@@ -26,6 +29,8 @@ jobs:
           cache: npm
           cache-dependency-path: package-lock.json
       - run: npm ci
+      - name: 公式DBから規制データを更新（取れなければ前回のまま）
+        run: node scripts/fetch-regulation.mjs
       - run: npm test
       - run: npm run build
       - if: github.event_name != 'pull_request'

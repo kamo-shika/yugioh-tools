@@ -1,0 +1,1217 @@
+{
+ "date": "2026-10-01",
+ "previous": "2026-07-01",
+ "upcoming": null,
+ "fetched_at": "2026-11-15",
+ "source": "https://www.db.yugioh-card.com/yugiohdb/forbidden_limited.action?request_locale=ja",
+ "forbidden": [
+  {
+   "name": "アマゾネスの射手",
+   "cid": "5195",
+   "type": "main"
+  },
+  {
+   "name": "アーティファクト－デスサイズ",
+   "cid": "11195",
+   "type": "main"
+  },
+  {
+   "name": "イレカエル",
+   "cid": "7601",
+   "type": "main"
+  },
+  {
+   "name": "ヴィクトリー・ドラゴン",
+   "cid": "5868",
+   "type": "main"
+  },
+  {
+   "name": "ヴェルズ・ウロボロス",
+   "cid": "10007",
+   "type": "extra"
+  },
+  {
+   "name": "永遠の淑女 ベアトリーチェ",
+   "cid": "12108",
+   "type": "extra"
+  },
+  {
+   "name": "琰魔竜王 レッド・デーモン・カラミティ",
+   "cid": "12080",
+   "type": "extra"
+  },
+  {
+   "name": "カタパルト・タートル",
+   "cid": "4095",
+   "type": "main"
+  },
+  {
+   "name": "外神アザトート",
+   "cid": "11518",
+   "type": "extra"
+  },
+  {
+   "name": "キャノン・ソルジャー",
+   "cid": "4518",
+   "type": "main"
+  },
+  {
+   "name": "儀式魔人リリーサー",
+   "cid": "8472",
+   "type": "main"
+  },
+  {
+   "name": "クシャトリラ・フェンリル",
+   "cid": "17768",
+   "type": "main"
+  },
+  {
+   "name": "水晶機巧－ハリファイバー",
+   "cid": "13508",
+   "type": "extra"
+  },
+  {
+   "name": "古衛兵アギド",
+   "cid": "17606",
+   "type": "main"
+  },
+  {
+   "name": "古尖兵ケルベク",
+   "cid": "17605",
+   "type": "main"
+  },
+  {
+   "name": "混沌魔龍 カオス・ルーラー",
+   "cid": "15277",
+   "type": "extra"
+  },
+  {
+   "name": "PSYフレームロード・Ω",
+   "cid": "12074",
+   "type": "extra"
+  },
+  {
+   "name": "閉ザサレシ天ノ月",
+   "cid": "19932",
+   "type": "extra"
+  },
+  {
+   "name": "The tyrant NEPTUNE",
+   "cid": "8733",
+   "type": "main"
+  },
+  {
+   "name": "SNo.0 ホープ・ゼアル",
+   "cid": "11932",
+   "type": "extra"
+  },
+  {
+   "name": "守護竜アガーペイン",
+   "cid": "14130",
+   "type": "extra"
+  },
+  {
+   "name": "守護竜エルピィ",
+   "cid": "14128",
+   "type": "extra"
+  },
+  {
+   "name": "召命の神弓－アポロウーサ",
+   "cid": "14496",
+   "type": "extra"
+  },
+  {
+   "name": "深淵に潜む者",
+   "cid": "10354",
+   "type": "extra"
+  },
+  {
+   "name": "真竜皇V.F.D.",
+   "cid": "12960",
+   "type": "extra"
+  },
+  {
+   "name": "十二獣ブルホーン",
+   "cid": "12786",
+   "type": "extra"
+  },
+  {
+   "name": "スプライト・エルフ",
+   "cid": "17451",
+   "type": "extra"
+  },
+  {
+   "name": "スプラッシュ・メイジ",
+   "cid": "15034",
+   "type": "extra"
+  },
+  {
+   "name": "ゼンマイハンター",
+   "cid": "9742",
+   "type": "main"
+  },
+  {
+   "name": "ダンディライオン",
+   "cid": "6654",
+   "type": "main"
+  },
+  {
+   "name": "超重武者装留ブレイク・アーマー",
+   "cid": "11344",
+   "type": "main"
+  },
+  {
+   "name": "ティアラメンツ・キトカロス",
+   "cid": "17444",
+   "type": "extra"
+  },
+  {
+   "name": "転晶のコーディネラル",
+   "cid": "15529",
+   "type": "extra"
+  },
+  {
+   "name": "ディメンション・アトラクター",
+   "cid": "14740",
+   "type": "main"
+  },
+  {
+   "name": "デビル・フランケン",
+   "cid": "4426",
+   "type": "main"
+  },
+  {
+   "name": "トゥーン・キャノン・ソルジャー",
+   "cid": "5477",
+   "type": "main"
+  },
+  {
+   "name": "トポロジック・ガンブラー・ドラゴン",
+   "cid": "13836",
+   "type": "extra"
+  },
+  {
+   "name": "トロイメア・マーメイド",
+   "cid": "13597",
+   "type": "extra"
+  },
+  {
+   "name": "トーチ・ゴーレム",
+   "cid": "7386",
+   "type": "main"
+  },
+  {
+   "name": "ナチュル・ローズウィップ",
+   "cid": "8102",
+   "type": "main"
+  },
+  {
+   "name": "No.95 ギャラクシーアイズ・ダークマター・ドラゴン",
+   "cid": "11651",
+   "type": "extra"
+  },
+  {
+   "name": "No.16 色の支配者ショック・ルーラー",
+   "cid": "9860",
+   "type": "extra"
+  },
+  {
+   "name": "No.86 H－C ロンゴミアント",
+   "cid": "11296",
+   "type": "extra"
+  },
+  {
+   "name": "No.41 泥睡魔獣バグースカ",
+   "cid": "13163",
+   "type": "extra"
+  },
+  {
+   "name": "No.67 パラダイスマッシャー",
+   "cid": "13824",
+   "type": "extra"
+  },
+  {
+   "name": "覇王眷竜スターヴ・ヴェノム",
+   "cid": "13077",
+   "type": "extra"
+  },
+  {
+   "name": "ファイバーポッド",
+   "cid": "5371",
+   "type": "main"
+  },
+  {
+   "name": "フィッシュボーグ－ガンナー",
+   "cid": "8318",
+   "type": "main"
+  },
+  {
+   "name": "フェニキシアン・クラスター・アマリリス",
+   "cid": "8159",
+   "type": "main"
+  },
+  {
+   "name": "BF－朧影のゴウフウ",
+   "cid": "12412",
+   "type": "main"
+  },
+  {
+   "name": "捕食植物ヴェルテ・アナコンダ",
+   "cid": "14944",
+   "type": "extra"
+  },
+  {
+   "name": "マジックテンペスター",
+   "cid": "8085",
+   "type": "extra"
+  },
+  {
+   "name": "魔導サイエンティスト",
+   "cid": "5657",
+   "type": "main"
+  },
+  {
+   "name": "M∀LICE＜Q＞RED RANSOM",
+   "cid": "20585",
+   "type": "extra"
+  },
+  {
+   "name": "メガキャノン・ソルジャー",
+   "cid": "7435",
+   "type": "main"
+  },
+  {
+   "name": "ユニオン・キャリアー",
+   "cid": "14932",
+   "type": "extra"
+  },
+  {
+   "name": "ラヴァルバル・チェイン",
+   "cid": "9821",
+   "type": "extra"
+  },
+  {
+   "name": "リンクロス",
+   "cid": "15035",
+   "type": "extra"
+  },
+  {
+   "name": "烈風の結界像",
+   "cid": "6885",
+   "type": "main"
+  },
+  {
+   "name": "レベル・スティーラー",
+   "cid": "8440",
+   "type": "main"
+  },
+  {
+   "name": "悪夢の蜃気楼",
+   "cid": "5433",
+   "type": "spell"
+  },
+  {
+   "name": "いたずら好きな双子悪魔",
+   "cid": "4901",
+   "type": "spell"
+  },
+  {
+   "name": "押収",
+   "cid": "4900",
+   "type": "spell"
+  },
+  {
+   "name": "カイザーコロシアム",
+   "cid": "5605",
+   "type": "spell"
+  },
+  {
+   "name": "苦渋の選択",
+   "cid": "4911",
+   "type": "spell"
+  },
+  {
+   "name": "強引な番兵",
+   "cid": "4907",
+   "type": "spell"
+  },
+  {
+   "name": "強欲な壺",
+   "cid": "4844",
+   "type": "spell"
+  },
+  {
+   "name": "神剣－フェニックスブレード",
+   "cid": "6458",
+   "type": "spell"
+  },
+  {
+   "name": "次元融合",
+   "cid": "5906",
+   "type": "spell"
+  },
+  {
+   "name": "生還の宝札",
+   "cid": "5123",
+   "type": "spell"
+  },
+  {
+   "name": "ソウル・チャージ",
+   "cid": "11159",
+   "type": "spell"
+  },
+  {
+   "name": "大寒波",
+   "cid": "5127",
+   "type": "spell"
+  },
+  {
+   "name": "蝶の短剣－エルマ",
+   "cid": "5724",
+   "type": "spell"
+  },
+  {
+   "name": "天使の施し",
+   "cid": "4812",
+   "type": "spell"
+  },
+  {
+   "name": "盗人の煙玉",
+   "cid": "5389",
+   "type": "spell"
+  },
+  {
+   "name": "墓穴の指名者",
+   "cid": "13619",
+   "type": "spell"
+  },
+  {
+   "name": "ハリケーン",
+   "cid": "4910",
+   "type": "spell"
+  },
+  {
+   "name": "魔鍾洞",
+   "cid": "14314",
+   "type": "spell"
+  },
+  {
+   "name": "魔獣の懐柔",
+   "cid": "10992",
+   "type": "spell"
+  },
+  {
+   "name": "マスドライバー",
+   "cid": "5671",
+   "type": "spell"
+  },
+  {
+   "name": "遺言状",
+   "cid": "4885",
+   "type": "spell"
+  },
+  {
+   "name": "異次元からの帰還",
+   "cid": "6078",
+   "type": "trap"
+  },
+  {
+   "name": "虚無空間",
+   "cid": "9153",
+   "type": "trap"
+  },
+  {
+   "name": "王宮の弾圧",
+   "cid": "5399",
+   "type": "trap"
+  },
+  {
+   "name": "王宮の勅命",
+   "cid": "4960",
+   "type": "trap"
+  },
+  {
+   "name": "サモンリミッター",
+   "cid": "7652",
+   "type": "trap"
+  },
+  {
+   "name": "第六感",
+   "cid": "5945",
+   "type": "trap"
+  },
+  {
+   "name": "ダスト・シュート",
+   "cid": "5446",
+   "type": "trap"
+  },
+  {
+   "name": "血の代償",
+   "cid": "4851",
+   "type": "trap"
+  },
+  {
+   "name": "ハーピィの羽根吹雪",
+   "cid": "12900",
+   "type": "trap"
+  },
+  {
+   "name": "マジカル・エクスプロージョン",
+   "cid": "6444",
+   "type": "trap"
+  },
+  {
+   "name": "ライフチェンジャー",
+   "cid": "6708",
+   "type": "trap"
+  },
+  {
+   "name": "ラストバトル！",
+   "cid": "5406",
+   "type": "trap"
+  },
+  {
+   "name": "分かつ烙印",
+   "cid": "17472",
+   "type": "trap"
+  }
+ ],
+ "limited": [
+  {
+   "name": "アイス・ライゼオル",
+   "cid": "20574",
+   "type": "main"
+  },
+  {
+   "name": "虹光の宣告者",
+   "cid": "11384",
+   "type": "extra"
+  },
+  {
+   "name": "VS ホーリー・スー",
+   "cid": "21433",
+   "type": "main"
+  },
+  {
+   "name": "VS ラゼン",
+   "cid": "18727",
+   "type": "main"
+  },
+  {
+   "name": "エクス・ライゼオル",
+   "cid": "20575",
+   "type": "main"
+  },
+  {
+   "name": "S：Pリトルナイト",
+   "cid": "19188",
+   "type": "extra"
+  },
+  {
+   "name": "耀聖の波詩ディーナ",
+   "cid": "22117",
+   "type": "main"
+  },
+  {
+   "name": "耀聖の花詩ルキナ",
+   "cid": "22116",
+   "type": "main"
+  },
+  {
+   "name": "キラーチューン・キュー",
+   "cid": "21956",
+   "type": "main"
+  },
+  {
+   "name": "キラーチューン・レコ",
+   "cid": "21955",
+   "type": "main"
+  },
+  {
+   "name": "キラーチューン・ロタリー",
+   "cid": "22531",
+   "type": "main"
+  },
+  {
+   "name": "クシャトリラ・ユニコーン",
+   "cid": "17769",
+   "type": "main"
+  },
+  {
+   "name": "剣神官ムドラ",
+   "cid": "17604",
+   "type": "main"
+  },
+  {
+   "name": "K９－６６a号 ヨクル",
+   "cid": "21377",
+   "type": "main"
+  },
+  {
+   "name": "PSYフレームギア・γ",
+   "cid": "12070",
+   "type": "main"
+  },
+  {
+   "name": "深淵の獣ルベリオン",
+   "cid": "17765",
+   "type": "main"
+  },
+  {
+   "name": "宿神像ケルドウ",
+   "cid": "17603",
+   "type": "main"
+  },
+  {
+   "name": "重爆撃禽 ボム・フェネクス",
+   "cid": "9256",
+   "type": "extra"
+  },
+  {
+   "name": "スネークアイ・エクセル",
+   "cid": "19149",
+   "type": "main"
+  },
+  {
+   "name": "ソード・ライゼオル",
+   "cid": "20572",
+   "type": "main"
+  },
+  {
+   "name": "増殖するG",
+   "cid": "9455",
+   "type": "main"
+  },
+  {
+   "name": "ティアラメンツ・クシャトリラ",
+   "cid": "18153",
+   "type": "main"
+  },
+  {
+   "name": "ティアラメンツ・シェイレーン",
+   "cid": "17415",
+   "type": "main"
+  },
+  {
+   "name": "ティアラメンツ・ハゥフニス",
+   "cid": "17416",
+   "type": "main"
+  },
+  {
+   "name": "ティアラメンツ・メイルゥ",
+   "cid": "17414",
+   "type": "main"
+  },
+  {
+   "name": "TG ハイパー・ライブラリアン",
+   "cid": "9554",
+   "type": "extra"
+  },
+  {
+   "name": "天盃龍チュンドラ",
+   "cid": "19859",
+   "type": "main"
+  },
+  {
+   "name": "星辰竜ムルル",
+   "cid": "21358",
+   "type": "main"
+  },
+  {
+   "name": "ドロール＆ロックバード",
+   "cid": "9279",
+   "type": "main"
+  },
+  {
+   "name": "No.40 ギミック・パペット－ヘブンズ・ストリングス",
+   "cid": "10216",
+   "type": "extra"
+  },
+  {
+   "name": "朱光の宣告者",
+   "cid": "7673",
+   "type": "main"
+  },
+  {
+   "name": "パーフェクトロン・ハイドライブ・ドラゴン",
+   "cid": "22743",
+   "type": "extra"
+  },
+  {
+   "name": "深淵の獣ドルイドヴルム",
+   "cid": "17764",
+   "type": "main"
+  },
+  {
+   "name": "深淵の獣マグナムート",
+   "cid": "17762",
+   "type": "main"
+  },
+  {
+   "name": "ファントム・オブ・ユベル",
+   "cid": "20037",
+   "type": "extra"
+  },
+  {
+   "name": "封印されしエクゾディア",
+   "cid": "4027",
+   "type": "main"
+  },
+  {
+   "name": "封印されし者の左足",
+   "cid": "4024",
+   "type": "main"
+  },
+  {
+   "name": "封印されし者の左腕",
+   "cid": "4026",
+   "type": "main"
+  },
+  {
+   "name": "封印されし者の右足",
+   "cid": "4023",
+   "type": "main"
+  },
+  {
+   "name": "封印されし者の右腕",
+   "cid": "4025",
+   "type": "main"
+  },
+  {
+   "name": "ブロックドラゴン",
+   "cid": "12433",
+   "type": "main"
+  },
+  {
+   "name": "ヘビーメタルフォーゼ・エレクトラム",
+   "cid": "13507",
+   "type": "extra"
+  },
+  {
+   "name": "マシュマオ☆ヤミー",
+   "cid": "21790",
+   "type": "main"
+  },
+  {
+   "name": "M∀LICE＜P＞Dormouse",
+   "cid": "20584",
+   "type": "main"
+  },
+  {
+   "name": "M∀LICE＜P＞March Hare",
+   "cid": "21160",
+   "type": "main"
+  },
+  {
+   "name": "魔を刻むデモンスミス",
+   "cid": "20196",
+   "type": "main"
+  },
+  {
+   "name": "ヤミー★スナッチー",
+   "cid": "21371",
+   "type": "extra"
+  },
+  {
+   "name": "一時休戦",
+   "cid": "9778",
+   "type": "spell"
+  },
+  {
+   "name": "簡易融合",
+   "cid": "6901",
+   "type": "spell"
+  },
+  {
+   "name": "大嵐",
+   "cid": "4891",
+   "type": "spell"
+  },
+  {
+   "name": "おろかな埋葬",
+   "cid": "5236",
+   "type": "spell"
+  },
+  {
+   "name": "篝火",
+   "cid": "19027",
+   "type": "spell"
+  },
+  {
+   "name": "完全なる世界 トゥーン・ワールド",
+   "cid": "23161",
+   "type": "spell"
+  },
+  {
+   "name": "キラーチューン・シンクロ",
+   "cid": "21961",
+   "type": "spell"
+  },
+  {
+   "name": "金満で謙虚な壺",
+   "cid": "15756",
+   "type": "spell"
+  },
+  {
+   "name": "儀式の下準備",
+   "cid": "12337",
+   "type": "spell"
+  },
+  {
+   "name": "計都星辰",
+   "cid": "21361",
+   "type": "spell"
+  },
+  {
+   "name": "原初の種",
+   "cid": "5846",
+   "type": "spell"
+  },
+  {
+   "name": "盃満ちる燦幻荘",
+   "cid": "19900",
+   "type": "spell"
+  },
+  {
+   "name": "燦幻開門",
+   "cid": "19901",
+   "type": "spell"
+  },
+  {
+   "name": "“罪宝狩りの悪魔”",
+   "cid": "19196",
+   "type": "spell"
+  },
+  {
+   "name": "死者蘇生",
+   "cid": "4842",
+   "type": "spell"
+  },
+  {
+   "name": "シンクロ・オーバーテイク",
+   "cid": "16256",
+   "type": "spell"
+  },
+  {
+   "name": "時空の七皇",
+   "cid": "20282",
+   "type": "spell"
+  },
+  {
+   "name": "閃刀機－ホーネットビット",
+   "cid": "13674",
+   "type": "spell"
+  },
+  {
+   "name": "絶解なる獄神門－テルミナス",
+   "cid": "22565",
+   "type": "spell"
+  },
+  {
+   "name": "増援",
+   "cid": "5328",
+   "type": "spell"
+  },
+  {
+   "name": "手札抹殺",
+   "cid": "4821",
+   "type": "spell"
+  },
+  {
+   "name": "テラ・フォーミング",
+   "cid": "5537",
+   "type": "spell"
+  },
+  {
+   "name": "刻まれし魔の詠聖",
+   "cid": "20240",
+   "type": "spell"
+  },
+  {
+   "name": "トゥーンのもくじ",
+   "cid": "5474",
+   "type": "spell"
+  },
+  {
+   "name": "隣の芝刈り",
+   "cid": "12801",
+   "type": "spell"
+  },
+  {
+   "name": "早すぎた埋葬",
+   "cid": "4966",
+   "type": "spell"
+  },
+  {
+   "name": "ハーピィの羽根帚",
+   "cid": "4678",
+   "type": "spell"
+  },
+  {
+   "name": "封印の黄金櫃",
+   "cid": "6161",
+   "type": "spell"
+  },
+  {
+   "name": "ブリリアント・フュージョン",
+   "cid": "11840",
+   "type": "spell"
+  },
+  {
+   "name": "盆回し",
+   "cid": "12978",
+   "type": "spell"
+  },
+  {
+   "name": "抹殺の指名者",
+   "cid": "14627",
+   "type": "spell"
+  },
+  {
+   "name": "魔法族の里",
+   "cid": "7916",
+   "type": "spell"
+  },
+  {
+   "name": "巳剣勧請",
+   "cid": "21058",
+   "type": "spell"
+  },
+  {
+   "name": "闇の誘惑",
+   "cid": "7570",
+   "type": "spell"
+  },
+  {
+   "name": "烙印融合",
+   "cid": "17066",
+   "type": "spell"
+  },
+  {
+   "name": "羅睺星辰",
+   "cid": "21362",
+   "type": "spell"
+  },
+  {
+   "name": "神碑の泉",
+   "cid": "17381",
+   "type": "spell"
+  },
+  {
+   "name": "六武の門",
+   "cid": "8602",
+   "type": "spell"
+  },
+  {
+   "name": "ワン・フォー・ワン",
+   "cid": "8197",
+   "type": "spell"
+  },
+  {
+   "name": "神の宣告",
+   "cid": "4861",
+   "type": "trap"
+  },
+  {
+   "name": "紅蓮の指名者",
+   "cid": "8515",
+   "type": "trap"
+  },
+  {
+   "name": "群雄割拠",
+   "cid": "5622",
+   "type": "trap"
+  },
+  {
+   "name": "御前試合",
+   "cid": "7934",
+   "type": "trap"
+  },
+  {
+   "name": "次元障壁",
+   "cid": "12668",
+   "type": "trap"
+  },
+  {
+   "name": "スキルドレイン",
+   "cid": "5740",
+   "type": "trap"
+  },
+  {
+   "name": "センサー万別",
+   "cid": "13447",
+   "type": "trap"
+  },
+  {
+   "name": "魔封じの芳香",
+   "cid": "5008",
+   "type": "trap"
+  },
+  {
+   "name": "レッド・リブート",
+   "cid": "13622",
+   "type": "trap"
+  }
+ ],
+ "semi_limited": [
+  {
+   "name": "K９－１７号 イヅナ",
+   "cid": "21376",
+   "type": "main"
+  },
+  {
+   "name": "十二獣モルモラット",
+   "cid": "12749",
+   "type": "main"
+  },
+  {
+   "name": "蛇眼の炎燐",
+   "cid": "19467",
+   "type": "main"
+  },
+  {
+   "name": "超重武者装留イワトオシ",
+   "cid": "11529",
+   "type": "main"
+  },
+  {
+   "name": "灰流うらら",
+   "cid": "12950",
+   "type": "main"
+  },
+  {
+   "name": "壱世壊＝ペルレイノ",
+   "cid": "17462",
+   "type": "spell"
+  },
+  {
+   "name": "おろかな副葬",
+   "cid": "12800",
+   "type": "spell"
+  },
+  {
+   "name": "強欲で金満な壺",
+   "cid": "14144",
+   "type": "spell"
+  },
+  {
+   "name": "The Fallen ＆ The Virtuous",
+   "cid": "22089",
+   "type": "spell"
+  },
+  {
+   "name": "閃刀起動－エンゲージ",
+   "cid": "13671",
+   "type": "spell"
+  },
+  {
+   "name": "超融合",
+   "cid": "7445",
+   "type": "spell"
+  },
+  {
+   "name": "神の警告",
+   "cid": "9008",
+   "type": "trap"
+  },
+  {
+   "name": "霊王の波動",
+   "cid": "20555",
+   "type": "trap"
+  }
+ ],
+ "changes": [
+  {
+   "name": "耀聖の波詩ディーナ",
+   "cid": "22117",
+   "type": "main",
+   "from": "無制限",
+   "to": "制限",
+   "stricter": true
+  },
+  {
+   "name": "耀聖の花詩ルキナ",
+   "cid": "22116",
+   "type": "main",
+   "from": "無制限",
+   "to": "制限",
+   "stricter": true
+  },
+  {
+   "name": "旧神ノーデン",
+   "cid": "11207",
+   "type": "extra",
+   "from": "制限",
+   "to": "制限解除",
+   "stricter": false
+  },
+  {
+   "name": "キラーチューン・キュー",
+   "cid": "21956",
+   "type": "main",
+   "from": "無制限",
+   "to": "制限",
+   "stricter": true
+  },
+  {
+   "name": "キラーチューン・レコ",
+   "cid": "21955",
+   "type": "main",
+   "from": "無制限",
+   "to": "制限",
+   "stricter": true
+  },
+  {
+   "name": "黒魔女ディアベルスター",
+   "cid": "19148",
+   "type": "main",
+   "from": "準制限",
+   "to": "制限解除",
+   "stricter": false
+  },
+  {
+   "name": "PSYフレームロード・Ω",
+   "cid": "12074",
+   "type": "extra",
+   "from": "制限",
+   "to": "禁止",
+   "stricter": true
+  },
+  {
+   "name": "斬機サーキュラー",
+   "cid": "17430",
+   "type": "main",
+   "from": "準制限",
+   "to": "制限解除",
+   "stricter": false
+  },
+  {
+   "name": "蛇眼の炎燐",
+   "cid": "19467",
+   "type": "main",
+   "from": "制限",
+   "to": "準制限",
+   "stricter": false
+  },
+  {
+   "name": "超重武者装留イワトオシ",
+   "cid": "11529",
+   "type": "main",
+   "from": "制限",
+   "to": "準制限",
+   "stricter": false
+  },
+  {
+   "name": "ディメンション・アトラクター",
+   "cid": "14740",
+   "type": "main",
+   "from": "制限",
+   "to": "禁止",
+   "stricter": true
+  },
+  {
+   "name": "覇王眷竜スターヴ・ヴェノム",
+   "cid": "13077",
+   "type": "extra",
+   "from": "制限",
+   "to": "禁止",
+   "stricter": true
+  },
+  {
+   "name": "パーフェクトロン・ハイドライブ・ドラゴン",
+   "cid": "22743",
+   "type": "extra",
+   "from": "準制限",
+   "to": "制限",
+   "stricter": true
+  },
+  {
+   "name": "メンタルマスター",
+   "cid": "7714",
+   "type": "main",
+   "from": "制限",
+   "to": "制限解除",
+   "stricter": false
+  },
+  {
+   "name": "壱世壊＝ペルレイノ",
+   "cid": "17462",
+   "type": "spell",
+   "from": "制限",
+   "to": "準制限",
+   "stricter": false
+  },
+  {
+   "name": "完全なる世界 トゥーン・ワールド",
+   "cid": "23161",
+   "type": "spell",
+   "from": "無制限",
+   "to": "制限",
+   "stricter": true
+  },
+  {
+   "name": "キラーチューン・シンクロ",
+   "cid": "21961",
+   "type": "spell",
+   "from": "準制限",
+   "to": "制限",
+   "stricter": true
+  },
+  {
+   "name": "The Fallen ＆ The Virtuous",
+   "cid": "22089",
+   "type": "spell",
+   "from": "無制限",
+   "to": "準制限",
+   "stricter": true
+  },
+  {
+   "name": "閃刀起動－エンゲージ",
+   "cid": "13671",
+   "type": "spell",
+   "from": "無制限",
+   "to": "準制限",
+   "stricter": true
+  },
+  {
+   "name": "絶解なる獄神門－テルミナス",
+   "cid": "22565",
+   "type": "spell",
+   "from": "無制限",
+   "to": "制限",
+   "stricter": true
+  },
+  {
+   "name": "トゥーンのもくじ",
+   "cid": "5474",
+   "type": "spell",
+   "from": "無制限",
+   "to": "制限",
+   "stricter": true
+  },
+  {
+   "name": "早すぎた埋葬",
+   "cid": "4966",
+   "type": "spell",
+   "from": "禁止",
+   "to": "制限",
+   "stricter": false
+  },
+  {
+   "name": "突然変異",
+   "cid": "5539",
+   "type": "spell",
+   "from": "準制限",
+   "to": "制限解除",
+   "stricter": false
+  },
+  {
+   "name": "紅蓮の指名者",
+   "cid": "8515",
+   "type": "trap",
+   "from": "無制限",
+   "to": "制限",
+   "stricter": true
+  }
+ ]
+}
