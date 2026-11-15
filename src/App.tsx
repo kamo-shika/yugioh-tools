@@ -9,6 +9,7 @@ import {
 import DuelTools from './DuelTools';
 import ProbabilityCalc from './ProbabilityCalc';
 import RegulationView from './RegulationView';
+import UpdateBanner from './UpdateBanner';
 
 type Tab = 'duel' | 'prob' | 'reg';
 const HASH: Record<Tab, string> = {duel: '#', prob: '#prob', reg: '#reg'};
@@ -32,6 +33,7 @@ export default function App() {
 
   return (
     <Theme theme={neutralTheme}>
+      <UpdateBanner />
       {tab === 'duel' ? (
         <DuelTools nav={nav} />
       ) : (

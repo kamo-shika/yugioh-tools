@@ -1,4 +1,5 @@
 import {CSSProperties, useEffect, useState} from 'react';
+import CoinFace from './CoinFace';
 import {coinFlip, diceRattle, landed} from './sound';
 
 export type Roll = {kind: 'dice'; value: number; at: number} | {kind: 'coin'; value: '表' | '裏'; at: number};
@@ -87,8 +88,12 @@ export default function RollOverlay({roll, onClose}: {roll: Roll; onClose: () =>
           </div>
         ) : (
           <div className="coin" style={style}>
-            <div className="coin-face coin-front">表</div>
-            <div className="coin-face coin-back">裏</div>
+            <div className="coin-face coin-front">
+              <CoinFace side="表" />
+            </div>
+            <div className="coin-face coin-back">
+              <CoinFace side="裏" />
+            </div>
           </div>
         )}
       </div>

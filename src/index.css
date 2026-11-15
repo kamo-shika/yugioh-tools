@@ -456,16 +456,14 @@ button {
   font-weight: 800;
   backface-visibility: hidden;
 }
-.coin-front {
-  background: radial-gradient(circle at 35% 30%, #fff3b0, #e0b100 55%, #a57a00);
-  color: #6b4d00;
-  box-shadow: inset 0 0 0 6px rgba(120, 85, 0, 0.35);
-}
 .coin-back {
-  background: radial-gradient(circle at 35% 30%, #ffffff, #b9bec7 55%, #7c838f);
-  color: #3d434d;
-  box-shadow: inset 0 0 0 6px rgba(60, 65, 75, 0.35);
   transform: rotateY(180deg);
+}
+.coin-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.35));
 }
 
 .roll-label {
@@ -486,4 +484,31 @@ button {
 @media (prefers-reduced-motion: reduce) {
   .lp-flash-damage, .lp-flash-heal, .lp-delta, .toss-go { animation: none; }
   .cube, .coin { transition: none; }
+}
+
+/* ===== 新しい版の案内 ===== */
+.update-banner {
+  position: fixed;
+  top: max(8px, env(safe-area-inset-top));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 6px 6px 16px;
+  border-radius: 999px;
+  background: var(--color-text-primary, #111);
+  color: var(--color-background-body, #fff);
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+}
+.update-banner button {
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 700;
+  background: var(--color-background-body, #fff);
+  color: var(--color-text-primary, #111);
 }
