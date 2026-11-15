@@ -2,6 +2,7 @@
 // src/data/regulation.json に書く。ビルド前と毎週の定期実行で動く。
 // 取れなかったときはファイルを変えずに終了する（前回の内容でページを出す）。
 import {writeFileSync} from 'node:fs';
+import {ENTITIES} from './html-entities.mjs';
 
 const DB = 'https://www.db.yugioh-card.com/yugiohdb/forbidden_limited.action';
 const SITE = 'https://www.yugioh-card.com/japan/event/limitregulation/';
@@ -16,7 +17,6 @@ const get = async url => {
   return r.text();
 };
 
-const ENTITIES = {"alpha": "α", "Alpha": "Α", "beta": "β", "Beta": "Β", "gamma": "γ", "Gamma": "Γ", "delta": "δ", "Delta": "Δ", "epsilon": "ε", "Epsilon": "Ε", "zeta": "ζ", "Zeta": "Ζ", "eta": "η", "Eta": "Η", "theta": "θ", "Theta": "Θ", "iota": "ι", "Iota": "Ι", "kappa": "κ", "Kappa": "Κ", "lambda": "λ", "Lambda": "Λ", "mu": "μ", "Mu": "Μ", "nu": "ν", "Nu": "Ν", "xi": "ξ", "Xi": "Ξ", "omicron": "ο", "Omicron": "Ο", "pi": "π", "Pi": "Π", "rho": "ρ", "Rho": "Ρ", "sigma": "σ", "Sigma": "Σ", "tau": "τ", "Tau": "Τ", "upsilon": "υ", "Upsilon": "Υ", "phi": "φ", "Phi": "Φ", "chi": "χ", "Chi": "Χ", "psi": "ψ", "Psi": "Ψ", "omega": "ω", "Omega": "Ω", "forall": "∀", "ldquo": "“", "rdquo": "”", "lsquo": "‘", "rsquo": "’", "hellip": "…", "middot": "·", "times": "×", "star": "☆", "hearts": "♥", "spades": "♠", "clubs": "♣", "diams": "♦", "infin": "∞", "nbsp": " ", "rArr": "⇒", "rarr": "→", "larr": "←", "harr": "↔", "deg": "°", "plusmn": "±", "sup2": "²", "frac12": "½", "laquo": "«", "raquo": "»", "bull": "•", "dagger": "†", "sim": "∼"};
 
 const unescape = s =>
   s

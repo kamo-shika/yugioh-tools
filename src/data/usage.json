@@ -1,0 +1,170 @@
+{
+ "fetched_at": "2026-11-15",
+ "from": "2026-10-17",
+ "to": "2026-11-07",
+ "total": 133,
+ "source": {
+  "title": "ガチまとめ「環境解説と入賞デッキまとめ」",
+  "url": "https://gachi-matome.com/trend-yg/",
+  "region": "関西の大会の予選"
+ },
+ "tournaments": [
+  {
+   "name": "第46回 蓮杯 個人戦",
+   "date": "2026-11-07",
+   "players": 34,
+   "url": "https://gachi-matome.com/trend-yg/"
+  },
+  {
+   "name": "第1回 もん杯 個人戦",
+   "date": "2026-11-03",
+   "players": 63,
+   "url": "https://gachi-matome.com/trend-yg/"
+  },
+  {
+   "name": "第27回 Mogi杯個人戦",
+   "date": "2026-10-25",
+   "players": 36,
+   "url": "https://gachi-matome.com/trend-yg-20261031/"
+  }
+ ],
+ "skipped": [],
+ "decks": [
+  {
+   "name": "エルフェンノーツ",
+   "count": 20
+  },
+  {
+   "name": "光と闇の儀式",
+   "count": 17
+  },
+  {
+   "name": "獄神",
+   "count": 8
+  },
+  {
+   "name": "三幻魔",
+   "count": 8
+  },
+  {
+   "name": "ウィッチクラフト",
+   "count": 7
+  },
+  {
+   "name": "ドラゴンテイル",
+   "count": 7
+  },
+  {
+   "name": "リインゼルム",
+   "count": 7
+  },
+  {
+   "name": "時の黒魔術師",
+   "count": 6
+  },
+  {
+   "name": "HERO",
+   "count": 4
+  },
+  {
+   "name": "M∀LICE",
+   "count": 4
+  },
+  {
+   "name": "磁石の戦士",
+   "count": 4
+  },
+  {
+   "name": "破械",
+   "count": 4
+  },
+  {
+   "name": "セネト",
+   "count": 3
+  },
+  {
+   "name": "ハーピィアマゾネス",
+   "count": 3
+  },
+  {
+   "name": "閃刀姫",
+   "count": 3
+  },
+  {
+   "name": "アトランティス",
+   "count": 2
+  },
+  {
+   "name": "シンクロン",
+   "count": 2
+  },
+  {
+   "name": "ドゥームズ",
+   "count": 2
+  },
+  {
+   "name": "メメント",
+   "count": 2
+  },
+  {
+   "name": "太陽神",
+   "count": 2
+  },
+  {
+   "name": "転生炎獣",
+   "count": 2
+  },
+  {
+   "name": "道化の一座",
+   "count": 2
+  },
+  {
+   "name": "妖精伝姫",
+   "count": 2
+  },
+  {
+   "name": "列車",
+   "count": 2
+  },
+  {
+   "name": "BF",
+   "count": 1
+  },
+  {
+   "name": "ヴァレット",
+   "count": 1
+  },
+  {
+   "name": "オルフェゴール",
+   "count": 1
+  },
+  {
+   "name": "キラーチューン",
+   "count": 1
+  },
+  {
+   "name": "ライトロード",
+   "count": 1
+  },
+  {
+   "name": "レイズ・ムーン",
+   "count": 1
+  },
+  {
+   "name": "白き森",
+   "count": 1
+  },
+  {
+   "name": "白鴉",
+   "count": 1
+  },
+  {
+   "name": "巳剣ライゼオル",
+   "count": 1
+  },
+  {
+   "name": "竜都アトランティス",
+   "count": 1
+  }
+ ]
+}

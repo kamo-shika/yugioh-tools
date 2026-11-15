@@ -25,6 +25,7 @@ import {
   regulation as reg,
   ymd,
 } from './regulation';
+import UsageChart from './UsageChart';
 import './regulation.css';
 
 type Level = 'forbidden' | 'limited' | 'semi_limited';
@@ -266,9 +267,10 @@ export default function RegulationView() {
       )}
 
       <div className="reg-grid">
-        <Changes />
+        <UsageChart />
         <MetaTiers />
       </div>
+      <Changes />
       <FullList />
 
       <Text size="sm" color="secondary">

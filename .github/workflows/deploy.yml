@@ -31,6 +31,8 @@ jobs:
       - run: npm ci
       - name: 公式DBから規制データを更新（取れなければ前回のまま）
         run: node scripts/fetch-regulation.mjs
+      - name: 大会の予選デッキ分布を集計（取れなければ前回のまま）
+        run: node scripts/fetch-usage.mjs
       - run: npm test
       - run: npm run build
       - if: github.event_name != 'pull_request'

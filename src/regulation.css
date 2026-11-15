@@ -280,3 +280,148 @@
   color: var(--color-text-primary);
   background: var(--color-background-secondary);
 }
+
+/* デッキの使用率（上位5＋その他）。色は検証済みの分類色を順番どおりに使う */
+.reg-page {
+  --usage-1: #2a78d6;
+  --usage-2: #eb6834;
+  --usage-3: #1baf7a;
+  --usage-4: #eda100;
+  --usage-5: #e87ba4;
+  --usage-other: #a3a29c;
+  --usage-bar: #2a78d6;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme='light'])) .reg-page {
+    --usage-1: #3987e5;
+    --usage-2: #d95926;
+    --usage-3: #199e70;
+    --usage-4: #c98500;
+    --usage-5: #d55181;
+    --usage-other: #6b6a65;
+    --usage-bar: #3987e5;
+  }
+}
+:root[data-theme='dark'] .reg-page {
+  --usage-1: #3987e5;
+  --usage-2: #d95926;
+  --usage-3: #199e70;
+  --usage-4: #c98500;
+  --usage-5: #d55181;
+  --usage-other: #6b6a65;
+  --usage-bar: #3987e5;
+}
+.usage-s1 { --c: var(--usage-1); }
+.usage-s2 { --c: var(--usage-2); }
+.usage-s3 { --c: var(--usage-3); }
+.usage-s4 { --c: var(--usage-4); }
+.usage-s5 { --c: var(--usage-5); }
+.usage-other { --c: var(--usage-other); }
+
+.usage-main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 24px;
+}
+.usage-donut {
+  width: 200px;
+  height: 200px;
+  flex-shrink: 0;
+  margin: 0 auto;
+}
+.usage-seg {
+  fill: var(--c);
+  stroke: var(--color-background-card);
+  stroke-width: 2;
+  cursor: default;
+  transition: d 0.15s;
+}
+.usage-center-main {
+  font-size: 22px;
+  font-weight: 700;
+  fill: var(--color-text-primary);
+  font-variant-numeric: tabular-nums;
+}
+.usage-center-sub {
+  font-size: 12px;
+  fill: var(--color-text-secondary);
+}
+.usage-legend {
+  flex: 1 1 220px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.usage-legend li {
+  display: grid;
+  grid-template-columns: 12px 1fr auto auto;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 4px;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 14px;
+  color: var(--color-text-primary);
+}
+.usage-legend li.is-active {
+  background: var(--color-background-secondary);
+}
+.usage-legend a {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: var(--color-border);
+  text-underline-offset: 3px;
+}
+.usage-swatch {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background: var(--c);
+}
+.usage-legend-num {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+}
+.usage-legend-count {
+  min-width: 3.5em;
+  text-align: right;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+.usage-bars {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 4px;
+}
+.usage-bars li {
+  display: grid;
+  grid-template-columns: minmax(7em, 11em) 1fr 7.5em;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--color-text-primary);
+}
+.usage-bar-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.usage-bar-track {
+  height: 10px;
+}
+.usage-bar-fill {
+  display: block;
+  height: 100%;
+  min-width: 2px;
+  border-radius: 0 4px 4px 0;
+  background: var(--usage-bar);
+}
+.usage-bar-num {
+  text-align: right;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  font-variant-numeric: tabular-nums;
+}
