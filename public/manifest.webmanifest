@@ -1,10 +1,18 @@
 {
+  "id": "/yugioh-tools/",
   "name": "遊戯王 デュエルツール",
   "short_name": "デュエルツール",
-  "start_url": "./",
-  "scope": "./",
+  "description": "ライフ計算・ダイス・コイン・初手確率",
+  "lang": "ja",
+  "start_url": "/yugioh-tools/",
+  "scope": "/yugioh-tools/",
   "display": "standalone",
   "orientation": "landscape",
   "background_color": "#f0f0f0",
-  "theme_color": "#f0f0f0"
+  "theme_color": "#f0f0f0",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
 }
