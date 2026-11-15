@@ -193,8 +193,31 @@
   display: grid;
   gap: 2px;
 }
+.reg-deck-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 8px;
+}
 .reg-deck-name {
   font-weight: 700;
+  color: var(--color-text-primary);
+  text-decoration: underline;
+  text-decoration-color: var(--color-border);
+  text-underline-offset: 3px;
+}
+.reg-deck-name:hover {
+  text-decoration-color: currentColor;
+}
+.reg-deck-db {
+  padding: 1px 8px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+.reg-deck-db:hover {
   color: var(--color-text-primary);
 }
 .reg-deck-note {
@@ -222,6 +245,7 @@
   gap: 6px;
 }
 .reg-history-deck {
+  text-decoration: none;
   padding: 2px 8px;
   border-radius: 999px;
   font-size: 12px;
