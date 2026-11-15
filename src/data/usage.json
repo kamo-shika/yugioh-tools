@@ -1,170 +1,724 @@
 {
- "fetched_at": "2026-11-15",
- "from": "2026-10-17",
- "to": "2026-11-07",
- "total": 133,
- "source": {
-  "title": "ガチまとめ「環境解説と入賞デッキまとめ」",
-  "url": "https://gachi-matome.com/trend-yg/",
-  "region": "関西の大会の予選"
- },
- "tournaments": [
+ "sources": [
   {
-   "name": "第46回 蓮杯 個人戦",
-   "date": "2026-11-07",
-   "players": 34,
-   "url": "https://gachi-matome.com/trend-yg/"
+   "id": "national",
+   "label": "全国",
+   "metric": "入賞回数",
+   "unit": "回",
+   "from": "2026-10-16",
+   "to": "2026-11-15",
+   "total": 1181,
+   "sample": "入賞デッキ896件",
+   "note": "SNSなどに出た全国の大会の入賞デッキ。1つのデッキが複数テーマに数えられることがあるので、テーマの入賞回数の合計を100%として割合を出し直している（TCG PORTAL のシェア％とは少し違う）。",
+   "source": {
+    "title": "TCG PORTAL「環境分析」",
+    "url": "https://tcg-portal.jp/yugioh/meta-analysis"
+   },
+   "events": [],
+   "skipped": 0,
+   "decks": [
+    {
+     "name": "光と闇の儀式",
+     "count": 117
+    },
+    {
+     "name": "エルフェンノーツ",
+     "count": 113
+    },
+    {
+     "name": "レイズ・ムーン",
+     "count": 72
+    },
+    {
+     "name": "三幻魔",
+     "count": 64
+    },
+    {
+     "name": "アルス＝マグナ",
+     "count": 59
+    },
+    {
+     "name": "獄神",
+     "count": 54
+    },
+    {
+     "name": "巳剣",
+     "count": 46
+    },
+    {
+     "name": "ハーピィ",
+     "count": 41
+    },
+    {
+     "name": "アマゾネス",
+     "count": 40
+    },
+    {
+     "name": "時の黒魔術師",
+     "count": 34
+    },
+    {
+     "name": "アシュトラ",
+     "count": 30
+    },
+    {
+     "name": "太陽神",
+     "count": 28
+    },
+    {
+     "name": "M∀LICE",
+     "count": 25
+    },
+    {
+     "name": "白鴉",
+     "count": 24
+    },
+    {
+     "name": "閃刀姫",
+     "count": 24
+    },
+    {
+     "name": "烙印",
+     "count": 23
+    },
+    {
+     "name": "道化の一座",
+     "count": 20
+    },
+    {
+     "name": "ウィッチクラフト",
+     "count": 17
+    },
+    {
+     "name": "ドラゴンテイル",
+     "count": 16
+    },
+    {
+     "name": "異解△",
+     "count": 15
+    },
+    {
+     "name": "リインゼルム",
+     "count": 15
+    },
+    {
+     "name": "サラマングレイト",
+     "count": 14
+    },
+    {
+     "name": "アルトメギア",
+     "count": 13
+    },
+    {
+     "name": "六花",
+     "count": 12
+    },
+    {
+     "name": "青眼",
+     "count": 12
+    },
+    {
+     "name": "妖精伝姫",
+     "count": 12
+    },
+    {
+     "name": "ブラック・マジシャン",
+     "count": 12
+    },
+    {
+     "name": "ブリッツクリーク",
+     "count": 11
+    },
+    {
+     "name": "オルフェゴール",
+     "count": 10
+    },
+    {
+     "name": "破械",
+     "count": 10
+    },
+    {
+     "name": "セネト",
+     "count": 10
+    },
+    {
+     "name": "スネークアイ",
+     "count": 10
+    },
+    {
+     "name": "召喚獣",
+     "count": 9
+    },
+    {
+     "name": "海皇水精鱗",
+     "count": 9
+    },
+    {
+     "name": "マギストス",
+     "count": 9
+    },
+    {
+     "name": "アトランティス",
+     "count": 8
+    },
+    {
+     "name": "ヤミー",
+     "count": 7
+    },
+    {
+     "name": "D-HERO",
+     "count": 7
+    },
+    {
+     "name": "白き森",
+     "count": 7
+    },
+    {
+     "name": "キラーチューン",
+     "count": 6
+    },
+    {
+     "name": "ライゼオル",
+     "count": 5
+    },
+    {
+     "name": "天盃龍",
+     "count": 5
+    },
+    {
+     "name": "HERO",
+     "count": 5
+    },
+    {
+     "name": "磁石の戦士",
+     "count": 5
+    },
+    {
+     "name": "罪宝",
+     "count": 5
+    },
+    {
+     "name": "ドゥームズ",
+     "count": 4
+    },
+    {
+     "name": "ラビュリンス",
+     "count": 4
+    },
+    {
+     "name": "絢嵐",
+     "count": 4
+    },
+    {
+     "name": "列車",
+     "count": 4
+    },
+    {
+     "name": "原石",
+     "count": 4
+    },
+    {
+     "name": "ライトロード",
+     "count": 3
+    },
+    {
+     "name": "K９",
+     "count": 3
+    },
+    {
+     "name": "光の黄金櫃",
+     "count": 3
+    },
+    {
+     "name": "ドラグマ",
+     "count": 3
+    },
+    {
+     "name": "幻影騎士団",
+     "count": 3
+    },
+    {
+     "name": "サイバー・ドラゴン",
+     "count": 3
+    },
+    {
+     "name": "メメント",
+     "count": 3
+    },
+    {
+     "name": "アザミナ",
+     "count": 3
+    },
+    {
+     "name": "クリストロン",
+     "count": 2
+    },
+    {
+     "name": "リジェネシス",
+     "count": 2
+    },
+    {
+     "name": "月光",
+     "count": 2
+    },
+    {
+     "name": "テラナイト",
+     "count": 2
+    },
+    {
+     "name": "エクソシスター",
+     "count": 2
+    },
+    {
+     "name": "リボルボット",
+     "count": 2
+    },
+    {
+     "name": "DDD",
+     "count": 2
+    },
+    {
+     "name": "レッド・デーモン",
+     "count": 2
+    },
+    {
+     "name": "ドレミコード",
+     "count": 2
+    },
+    {
+     "name": "デモンスミス",
+     "count": 2
+    },
+    {
+     "name": "ヴァレット",
+     "count": 2
+    },
+    {
+     "name": "ホルス",
+     "count": 1
+    },
+    {
+     "name": "シャドール",
+     "count": 1
+    },
+    {
+     "name": "バスター・ブレイダー",
+     "count": 1
+    },
+    {
+     "name": "御巫",
+     "count": 1
+    },
+    {
+     "name": "ユベル",
+     "count": 1
+    },
+    {
+     "name": "メタビート",
+     "count": 1
+    },
+    {
+     "name": "ティアラメンツ",
+     "count": 1
+    },
+    {
+     "name": "マシンナーズ",
+     "count": 1
+    },
+    {
+     "name": "霊使い",
+     "count": 1
+    },
+    {
+     "name": "シャーク",
+     "count": 1
+    },
+    {
+     "name": "氷結界",
+     "count": 1
+    },
+    {
+     "name": "トゥーン",
+     "count": 1
+    },
+    {
+     "name": "オノマト",
+     "count": 1
+    },
+    {
+     "name": "捕食植物",
+     "count": 1
+    },
+    {
+     "name": "アロマ",
+     "count": 1
+    },
+    {
+     "name": "エニアクラフト",
+     "count": 1
+    },
+    {
+     "name": "巨大戦艦",
+     "count": 1
+    },
+    {
+     "name": "P.U.N.K.",
+     "count": 1
+    },
+    {
+     "name": "鉄獣戦線",
+     "count": 1
+    },
+    {
+     "name": "ミミグル",
+     "count": 1
+    },
+    {
+     "name": "キマイラ",
+     "count": 1
+    },
+    {
+     "name": "デーモン",
+     "count": 1
+    },
+    {
+     "name": "シンクロン",
+     "count": 1
+    },
+    {
+     "name": "アンブラル",
+     "count": 1
+    },
+    {
+     "name": "サイバースGS",
+     "count": 1
+    }
+   ],
+   "fetched_at": "2026-11-15"
   },
   {
-   "name": "第1回 もん杯 個人戦",
-   "date": "2026-11-03",
-   "players": 63,
-   "url": "https://gachi-matome.com/trend-yg/"
+   "id": "kanto",
+   "label": "関東",
+   "metric": "優勝回数",
+   "unit": "回",
+   "from": "2026-10-19",
+   "to": "2026-11-06",
+   "total": 74,
+   "sample": "ランキングデュエル74大会の優勝",
+   "note": "カードラボ 秋葉原店のランキングデュエル（公認大会）で優勝したデッキ。混合デッキは先頭のテーマで数えた。",
+   "source": {
+    "title": "カードラボ 秋葉原店「ランキングデュエル優勝デッキまとめ」",
+    "url": "https://www.c-labo.jp/shop/stakihabara/blog/"
+   },
+   "events": [
+    {
+     "name": "今週のランキングデュエル優勝デッキまとめ！（11/2～11/8）",
+     "url": "https://www.c-labo.jp/shop/stakihabara/blog/624091/"
+    },
+    {
+     "name": "今週のランキングデュエル優勝デッキまとめ！（10/26～11/1）",
+     "url": "https://www.c-labo.jp/shop/stakihabara/blog/623535/"
+    },
+    {
+     "name": "今週のランキングデュエル優勝デッキまとめ！（10/19～10/25）",
+     "url": "https://www.c-labo.jp/shop/stakihabara/blog/622710/"
+    }
+   ],
+   "skipped": 0,
+   "decks": [
+    {
+     "name": "光と闇の儀式",
+     "count": 12
+    },
+    {
+     "name": "レイズ・ムーン",
+     "count": 9
+    },
+    {
+     "name": "三幻魔",
+     "count": 6
+    },
+    {
+     "name": "エルフェンノーツ",
+     "count": 5
+    },
+    {
+     "name": "天盃龍",
+     "count": 5
+    },
+    {
+     "name": "道化の一座",
+     "count": 5
+    },
+    {
+     "name": "破械",
+     "count": 3
+    },
+    {
+     "name": "アルス＝マグナ",
+     "count": 2
+    },
+    {
+     "name": "ドゥームズ",
+     "count": 2
+    },
+    {
+     "name": "御巫",
+     "count": 2
+    },
+    {
+     "name": "獄神",
+     "count": 2
+    },
+    {
+     "name": "時の黒魔術師",
+     "count": 2
+    },
+    {
+     "name": "閃刀姫",
+     "count": 2
+    },
+    {
+     "name": "妖精伝姫",
+     "count": 2
+    },
+    {
+     "name": "アルトメギア",
+     "count": 1
+    },
+    {
+     "name": "エクソシスター",
+     "count": 1
+    },
+    {
+     "name": "オルフェゴール",
+     "count": 1
+    },
+    {
+     "name": "ブリッツクリーク",
+     "count": 1
+    },
+    {
+     "name": "マギストス",
+     "count": 1
+    },
+    {
+     "name": "マグネット・ウォリアー",
+     "count": 1
+    },
+    {
+     "name": "ヤミー",
+     "count": 1
+    },
+    {
+     "name": "海皇",
+     "count": 1
+    },
+    {
+     "name": "糾罪巧",
+     "count": 1
+    },
+    {
+     "name": "青眼の白龍",
+     "count": 1
+    },
+    {
+     "name": "太陽神",
+     "count": 1
+    },
+    {
+     "name": "白鴉",
+     "count": 1
+    },
+    {
+     "name": "巳剣",
+     "count": 1
+    },
+    {
+     "name": "竜都アトランティス",
+     "count": 1
+    },
+    {
+     "name": "烙印",
+     "count": 1
+    }
+   ],
+   "fetched_at": "2026-11-15"
   },
   {
-   "name": "第27回 Mogi杯個人戦",
-   "date": "2026-10-25",
-   "players": 36,
-   "url": "https://gachi-matome.com/trend-yg-20261031/"
-  }
- ],
- "skipped": [],
- "decks": [
-  {
-   "name": "エルフェンノーツ",
-   "count": 20
-  },
-  {
-   "name": "光と闇の儀式",
-   "count": 17
-  },
-  {
-   "name": "獄神",
-   "count": 8
-  },
-  {
-   "name": "三幻魔",
-   "count": 8
-  },
-  {
-   "name": "ウィッチクラフト",
-   "count": 7
-  },
-  {
-   "name": "ドラゴンテイル",
-   "count": 7
-  },
-  {
-   "name": "リインゼルム",
-   "count": 7
-  },
-  {
-   "name": "時の黒魔術師",
-   "count": 6
-  },
-  {
-   "name": "HERO",
-   "count": 4
-  },
-  {
-   "name": "M∀LICE",
-   "count": 4
-  },
-  {
-   "name": "磁石の戦士",
-   "count": 4
-  },
-  {
-   "name": "破械",
-   "count": 4
-  },
-  {
-   "name": "セネト",
-   "count": 3
-  },
-  {
-   "name": "ハーピィアマゾネス",
-   "count": 3
-  },
-  {
-   "name": "閃刀姫",
-   "count": 3
-  },
-  {
-   "name": "アトランティス",
-   "count": 2
-  },
-  {
-   "name": "シンクロン",
-   "count": 2
-  },
-  {
-   "name": "ドゥームズ",
-   "count": 2
-  },
-  {
-   "name": "メメント",
-   "count": 2
-  },
-  {
-   "name": "太陽神",
-   "count": 2
-  },
-  {
-   "name": "転生炎獣",
-   "count": 2
-  },
-  {
-   "name": "道化の一座",
-   "count": 2
-  },
-  {
-   "name": "妖精伝姫",
-   "count": 2
-  },
-  {
-   "name": "列車",
-   "count": 2
-  },
-  {
-   "name": "BF",
-   "count": 1
-  },
-  {
-   "name": "ヴァレット",
-   "count": 1
-  },
-  {
-   "name": "オルフェゴール",
-   "count": 1
-  },
-  {
-   "name": "キラーチューン",
-   "count": 1
-  },
-  {
-   "name": "ライトロード",
-   "count": 1
-  },
-  {
-   "name": "レイズ・ムーン",
-   "count": 1
-  },
-  {
-   "name": "白き森",
-   "count": 1
-  },
-  {
-   "name": "白鴉",
-   "count": 1
-  },
-  {
-   "name": "巳剣ライゼオル",
-   "count": 1
-  },
-  {
-   "name": "竜都アトランティス",
-   "count": 1
+   "id": "kansai",
+   "label": "関西",
+   "metric": "予選の使用者数",
+   "unit": "人",
+   "from": "2026-10-17",
+   "to": "2026-11-07",
+   "total": 133,
+   "sample": "3大会・予選133人",
+   "note": "関西の店舗大会（CS）の予選に出た全員のデッキ。",
+   "source": {
+    "title": "ガチまとめ「環境解説と入賞デッキまとめ」",
+    "url": "https://gachi-matome.com/trend-yg/"
+   },
+   "events": [
+    {
+     "name": "第46回 蓮杯 個人戦",
+     "date": "2026-11-07",
+     "players": 34,
+     "url": "https://gachi-matome.com/trend-yg/"
+    },
+    {
+     "name": "第1回 もん杯 個人戦",
+     "date": "2026-11-03",
+     "players": 63,
+     "url": "https://gachi-matome.com/trend-yg/"
+    },
+    {
+     "name": "第27回 Mogi杯個人戦",
+     "date": "2026-10-25",
+     "players": 36,
+     "url": "https://gachi-matome.com/trend-yg-20261031/"
+    }
+   ],
+   "skipped": 0,
+   "decks": [
+    {
+     "name": "エルフェンノーツ",
+     "count": 20
+    },
+    {
+     "name": "光と闇の儀式",
+     "count": 17
+    },
+    {
+     "name": "獄神",
+     "count": 8
+    },
+    {
+     "name": "三幻魔",
+     "count": 8
+    },
+    {
+     "name": "ウィッチクラフト",
+     "count": 7
+    },
+    {
+     "name": "ドラゴンテイル",
+     "count": 7
+    },
+    {
+     "name": "リインゼルム",
+     "count": 7
+    },
+    {
+     "name": "時の黒魔術師",
+     "count": 6
+    },
+    {
+     "name": "HERO",
+     "count": 4
+    },
+    {
+     "name": "M∀LICE",
+     "count": 4
+    },
+    {
+     "name": "磁石の戦士",
+     "count": 4
+    },
+    {
+     "name": "破械",
+     "count": 4
+    },
+    {
+     "name": "セネト",
+     "count": 3
+    },
+    {
+     "name": "ハーピィアマゾネス",
+     "count": 3
+    },
+    {
+     "name": "閃刀姫",
+     "count": 3
+    },
+    {
+     "name": "アトランティス",
+     "count": 2
+    },
+    {
+     "name": "シンクロン",
+     "count": 2
+    },
+    {
+     "name": "ドゥームズ",
+     "count": 2
+    },
+    {
+     "name": "メメント",
+     "count": 2
+    },
+    {
+     "name": "太陽神",
+     "count": 2
+    },
+    {
+     "name": "転生炎獣",
+     "count": 2
+    },
+    {
+     "name": "道化の一座",
+     "count": 2
+    },
+    {
+     "name": "妖精伝姫",
+     "count": 2
+    },
+    {
+     "name": "列車",
+     "count": 2
+    },
+    {
+     "name": "BF",
+     "count": 1
+    },
+    {
+     "name": "ヴァレット",
+     "count": 1
+    },
+    {
+     "name": "オルフェゴール",
+     "count": 1
+    },
+    {
+     "name": "キラーチューン",
+     "count": 1
+    },
+    {
+     "name": "ライトロード",
+     "count": 1
+    },
+    {
+     "name": "レイズ・ムーン",
+     "count": 1
+    },
+    {
+     "name": "白き森",
+     "count": 1
+    },
+    {
+     "name": "白鴉",
+     "count": 1
+    },
+    {
+     "name": "巳剣ライゼオル",
+     "count": 1
+    },
+    {
+     "name": "竜都アトランティス",
+     "count": 1
+    }
+   ],
+   "fetched_at": "2026-11-15"
   }
  ]
 }

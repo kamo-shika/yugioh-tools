@@ -281,13 +281,16 @@
   background: var(--color-background-secondary);
 }
 
-/* デッキの使用率（上位5＋その他）。色は検証済みの分類色を順番どおりに使う */
+/* デッキの使用率（上位5＋その他）。色は検証済みの分類色8色を、デッキごとに固定して使う（地域を切り替えても同じ色） */
 .reg-page {
   --usage-1: #2a78d6;
   --usage-2: #eb6834;
   --usage-3: #1baf7a;
   --usage-4: #eda100;
   --usage-5: #e87ba4;
+  --usage-6: #008300;
+  --usage-7: #6250d6;
+  --usage-8: #e34948;
   --usage-other: #a3a29c;
   --usage-bar: #2a78d6;
 }
@@ -298,6 +301,9 @@
     --usage-3: #199e70;
     --usage-4: #c98500;
     --usage-5: #d55181;
+    --usage-6: #0ca30c;
+    --usage-7: #9085e9;
+    --usage-8: #e66767;
     --usage-other: #6b6a65;
     --usage-bar: #3987e5;
   }
@@ -308,6 +314,9 @@
   --usage-3: #199e70;
   --usage-4: #c98500;
   --usage-5: #d55181;
+  --usage-6: #0ca30c;
+  --usage-7: #9085e9;
+  --usage-8: #e66767;
   --usage-other: #6b6a65;
   --usage-bar: #3987e5;
 }
@@ -316,6 +325,9 @@
 .usage-s3 { --c: var(--usage-3); }
 .usage-s4 { --c: var(--usage-4); }
 .usage-s5 { --c: var(--usage-5); }
+.usage-s6 { --c: var(--usage-6); }
+.usage-s7 { --c: var(--usage-7); }
+.usage-s8 { --c: var(--usage-8); }
 .usage-other { --c: var(--usage-other); }
 
 .usage-main {
