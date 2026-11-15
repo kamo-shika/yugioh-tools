@@ -487,3 +487,30 @@ button {
   .lp-flash-damage, .lp-flash-heal, .lp-delta, .toss-go { animation: none; }
   .cube, .coin { transition: none; }
 }
+
+/* ===== 新しい版の案内 ===== */
+.update-banner {
+  position: fixed;
+  top: max(8px, env(safe-area-inset-top));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 60;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 6px 6px 16px;
+  border-radius: 999px;
+  background: var(--color-text-primary, #111);
+  color: var(--color-background-body, #fff);
+  font-weight: 600;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  white-space: nowrap;
+}
+.update-banner button {
+  border: 0;
+  border-radius: 999px;
+  padding: 8px 14px;
+  font-weight: 700;
+  background: var(--color-background-body, #fff);
+  color: var(--color-text-primary, #111);
+}
