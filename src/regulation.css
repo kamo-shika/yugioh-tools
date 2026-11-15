@@ -1,0 +1,258 @@
+/* 規制・環境ページ。区分の色：禁止=赤、制限=橙、準制限=黄、解除=緑 */
+.reg-page {
+  --lv-forbidden: #d93a3a;
+  --lv-limited: #e07b16;
+  --lv-semi: #c9a000;
+  --lv-free: #2e9b57;
+  --type-main: #c98a3a;
+  --type-extra: #8b5cc9;
+  --type-spell: #1f9d8a;
+  --type-trap: #c94f86;
+  max-width: 1100px;
+}
+
+.reg-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+.reg-date {
+  font-size: 34px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-primary);
+  line-height: 1.1;
+}
+.reg-stats {
+  display: flex;
+  gap: 8px;
+}
+.reg-stat {
+  display: grid;
+  justify-items: center;
+  min-width: 84px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  color: #fff;
+  background: var(--lv-color);
+}
+.reg-stat-label {
+  font-size: 13px;
+  font-weight: 600;
+}
+.reg-stat-num {
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+.reg-stat-limit {
+  font-size: 11px;
+  opacity: 0.9;
+}
+
+.lv-forbidden { --lv-color: var(--lv-forbidden); }
+.lv-limited { --lv-color: var(--lv-limited); }
+.lv-semi { --lv-color: var(--lv-semi); }
+.lv-free { --lv-color: var(--lv-free); }
+
+.reg-level {
+  display: inline-block;
+  padding: 1px 7px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: #fff;
+  background: var(--lv-color);
+}
+
+.reg-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 720px) {
+  .reg-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+.reg-two-col {
+  display: grid;
+  gap: 12px;
+}
+.reg-count {
+  margin-left: 8px;
+  font-size: 0.8em;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+.reg-sub {
+  margin: 0 0 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+.reg-sub-up { color: var(--lv-forbidden); }
+.reg-sub-down { color: var(--lv-free); }
+
+/* カードの種類は左の色線で表す */
+.type-main { --type-color: var(--type-main); }
+.type-extra { --type-color: var(--type-extra); }
+.type-spell { --type-color: var(--type-spell); }
+.type-trap { --type-color: var(--type-trap); }
+
+.reg-change-list,
+.reg-chips,
+.reg-history {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.reg-change {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 8px;
+  border-left: 4px solid var(--type-color);
+  border-bottom: 1px solid var(--color-border);
+  font-size: 14px;
+  color: var(--color-text-primary);
+}
+.reg-change > :first-child {
+  min-width: 0;
+}
+.reg-change-arrow {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
+  color: var(--color-text-secondary);
+}
+.reg-card-link {
+  color: inherit;
+  text-decoration: none;
+}
+.reg-card-link:hover {
+  text-decoration: underline;
+}
+
+.reg-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+.reg-legend-item::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+  border-radius: 2px;
+  background: var(--type-color);
+  vertical-align: -1px;
+}
+
+.reg-tiers {
+  display: grid;
+  gap: 8px;
+}
+.reg-tier {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+}
+.reg-tier-label {
+  display: grid;
+  place-items: center;
+  padding: 8px 4px;
+  font-weight: 700;
+  font-size: 14px;
+  color: #fff;
+  background: var(--tier-color);
+}
+.reg-tier-0 { --tier-color: #d93a3a; }
+.reg-tier-1 { --tier-color: #e07b16; }
+.reg-tier-2 { --tier-color: #3a7bd9; }
+.reg-tier-3 { --tier-color: #8a8f98; }
+.reg-tier-decks {
+  display: grid;
+  gap: 6px;
+  padding: 8px 10px;
+  background: var(--color-background-card);
+}
+.reg-deck {
+  display: grid;
+  gap: 2px;
+}
+.reg-deck-name {
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+.reg-deck-note {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.reg-history li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 10px;
+  padding: 6px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+.reg-history-date {
+  width: 92px;
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-secondary);
+}
+.reg-history-decks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.reg-history-deck {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--color-text-primary);
+  background: var(--color-background-secondary);
+}
+.reg-history-deck.rank-0 {
+  color: #fff;
+  background: var(--lv-forbidden);
+  font-weight: 700;
+}
+
+.type-head {
+  padding-left: 8px;
+  border-left: 4px solid var(--type-color);
+}
+.reg-chips {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 6px;
+  margin-bottom: 8px;
+}
+.reg-chip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 6px 8px;
+  border-left: 4px solid var(--type-color);
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--color-text-primary);
+  background: var(--color-background-secondary);
+}
