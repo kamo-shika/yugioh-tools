@@ -10,6 +10,8 @@ import {
   PlayerId,
   START_LP,
   applyLp,
+  changeBy,
+  resetDuel,
   flipCoin,
   halve,
   initialState,
@@ -17,6 +19,7 @@ import {
   undoLp,
 } from './duel';
 import {useWakeLock} from './useWakeLock';
+import {pressKey} from './keypad';
 import AnimatedLp from './AnimatedLp';
 import RollOverlay from './RollOverlay';
 import {isSoundOn, setSoundOn} from './sound';
@@ -24,7 +27,6 @@ import {isSoundOn, setSoundOn} from './sound';
 type RollEvent = Extract<DuelEvent, {kind: 'dice' | 'coin'}>;
 
 const STORAGE_KEY = 'ygo-duel-state-v1';
-const MAX_INPUT = 999999;
 
 function load(): DuelState {
   try {
@@ -74,7 +76,7 @@ export default function DuelTools({nav}: {nav: ReactNode}) {
 
   const changeLp = (p: PlayerId, sign: 1 | -1) => {
     if (!input) return;
-    setState(s => applyLp(s, p, s.lp[p] + sign * input));
+    setState(s => changeBy(s, p, sign * input));
     setInput(0);
   };
   const halveLp = (p: PlayerId) => setState(s => applyLp(s, p, halve(s.lp[p])));
@@ -94,7 +96,7 @@ export default function DuelTools({nav}: {nav: ReactNode}) {
     setConfirmReset(false);
     setLastRoll(null);
     setInput(0);
-    setState(s => ({...initialState(s.names), log: [{kind: 'reset', at: Date.now()}]}));
+    setState(resetDuel);
   };
 
   const rename = (p: PlayerId, name: string) =>
@@ -108,14 +110,9 @@ export default function DuelTools({nav}: {nav: ReactNode}) {
   const hasUndo = lastLp >= 0 && lastLp > state.log.findLastIndex(e => e.kind === 'reset');
 
   const press = (key: string) => {
-    if (key === 'C') return setInput(0);
     if (key === '🎲') return pushRandom({kind: 'dice', value: rollDice(), at: Date.now()});
     if (key === 'コイン') return pushRandom({kind: 'coin', value: flipCoin(), at: Date.now()});
-    if (key === '⌫') return setInput(v => Math.floor(v / 10));
-    setInput(v => {
-      const next = Number(`${v}${key}`);
-      return next > MAX_INPUT ? v : next;
-    });
+    setInput(v => pressKey(v, key));
   };
 
   return (

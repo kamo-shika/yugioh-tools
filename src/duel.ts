@@ -34,6 +34,16 @@ export function applyLp(state: DuelState, player: PlayerId, after: number): Duel
   };
 }
 
+/** LP を amount だけ増減させる（ダメージは負の値） */
+export const changeBy = (state: DuelState, player: PlayerId, amount: number): DuelState =>
+  applyLp(state, player, state.lp[player] + amount);
+
+/** デュエルを最初からにする（名前は引き継ぐ） */
+export const resetDuel = (state: DuelState): DuelState => ({
+  ...initialState(state.names),
+  log: [{kind: 'reset', at: Date.now()}],
+});
+
 /** 「LPを半分にする」（端数切り上げ） */
 export const halve = (lp: number) => Math.ceil(lp / 2);
 

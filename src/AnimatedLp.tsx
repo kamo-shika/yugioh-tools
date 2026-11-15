@@ -57,15 +57,19 @@ export default function AnimatedLp({lp, className}: {lp: number; className: stri
 
   const flash = delta ? (delta.value < 0 ? 'lp-flash-damage' : 'lp-flash-heal') : '';
 
+  // 演出をやり直すために変化ごとに要素を作り直す。
+  // 数字と増減量は兄弟要素なので、key が重なると React が古い要素を消せずに残してしまう（以前のバグ）。
+  const changeId = delta?.key ?? 0;
+
   return (
     <div className="lp-wrap">
-      <div className={`${className} ${flash}`} key={delta?.key ?? 0}>
+      <div className={`${className} ${flash}`} key={`lp-${changeId}`}>
         {fmt(shown)}
       </div>
       {delta && (
         <span
           className={`lp-delta ${delta.value < 0 ? 'lp-delta-damage' : 'lp-delta-heal'}`}
-          key={delta.key}
+          key={`delta-${changeId}`}
           aria-hidden="true">
           {delta.value < 0 ? '−' : '＋'}
           {fmt(Math.abs(delta.value))}

@@ -34,7 +34,8 @@ GitHub Pages で公開する、対戦中に使う計算ツールです。UI は 
 ```bash
 npm install
 npm run dev     # 開発サーバー
-npm test        # 計算ロジックのテスト
+npm test        # ユニットテスト（Vitest）
+npm run test:e2e  # 画面のテスト（Playwright、スマホ横置き・縦置き）
 npm run build   # dist/ に静的ファイルを出力
 ```
 
