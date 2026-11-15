@@ -1,0 +1,10 @@
+{
+  "name": "遊戯王 デュエルツール",
+  "short_name": "デュエルツール",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#f0f0f0",
+  "theme_color": "#f0f0f0"
+}

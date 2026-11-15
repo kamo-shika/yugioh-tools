@@ -1,0 +1,341 @@
+html, body {
+  background: var(--color-background-body);
+}
+button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+.big-number {
+  font-size: 40px;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+  color: var(--color-text-primary);
+}
+.group-row {
+  display: grid;
+  grid-template-columns: 1fr 110px 110px auto;
+  gap: 12px;
+  align-items: end;
+}
+@media (max-width: 560px) {
+  .group-row {
+    grid-template-columns: 1fr 1fr;
+  }
+  .group-row > :first-child {
+    grid-column: 1 / -1;
+  }
+}
+.ref-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+.ref-table th,
+.ref-table td {
+  padding: 8px 10px;
+  text-align: right;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-primary);
+}
+.ref-table th:first-child,
+.ref-table td:first-child {
+  text-align: left;
+}
+.ref-table thead th {
+  color: var(--color-text-secondary);
+  font-weight: 600;
+}
+.table-scroll {
+  overflow-x: auto;
+}
+
+/* ===== デュエル画面（スマホ横置きを主に想定） ===== */
+.duel {
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px max(8px, env(safe-area-inset-right)) max(8px, env(safe-area-inset-bottom))
+    max(8px, env(safe-area-inset-left));
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.duel-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  flex: none;
+}
+.duel-bar > :first-child {
+  flex: none;
+}
+.duel-bar-actions {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.turn {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  margin-right: 4px;
+}
+.turn-step {
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  font-size: 18px;
+  color: var(--color-text-secondary);
+}
+.turn-label {
+  min-width: 36px;
+  text-align: center;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-primary);
+}
+
+.duel-main {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1fr minmax(240px, 34%) 1fr;
+  grid-template-areas: 'left pad right';
+  gap: 8px;
+}
+
+.player {
+  grid-area: left;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  border-radius: 16px;
+  background: var(--color-background-card, var(--color-background-surface));
+  border: 1px solid var(--color-border);
+}
+.player-right {
+  grid-area: right;
+}
+.player-name {
+  align-self: flex-start;
+  border: 0;
+  background: transparent;
+  padding: 2px 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}
+.lp {
+  font-size: clamp(40px, min(14vh, 9vw), 104px);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-align: center;
+  color: var(--color-text-primary);
+}
+.lp-zero {
+  color: var(--color-text-error);
+}
+.lp-bar {
+  height: 6px;
+  border-radius: 999px;
+  background: var(--color-border);
+  overflow: hidden;
+  flex: none;
+}
+.lp-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--color-text-primary);
+  transition: width 0.25s ease-out;
+}
+.lp-fill-mid { background: var(--color-warning, #e8a400); }
+.lp-fill-low, .lp-fill-zero { background: var(--color-error, #d33); }
+
+.player-actions {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1.4fr 1fr;
+  gap: 6px;
+}
+.act {
+  min-height: 44px;
+  border: 0;
+  border-radius: 12px;
+  font-size: clamp(16px, 5vh, 22px);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  background: var(--color-background-secondary, rgba(0, 0, 0, 0.06));
+}
+.act:active:not(:disabled), .key:active {
+  transform: scale(0.96);
+  filter: brightness(0.92);
+}
+.act:disabled {
+  opacity: 0.4;
+}
+.act-damage, .act-heal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  white-space: nowrap;
+}
+.act-sign {
+  font-size: 1.6em;
+  line-height: 1;
+}
+.act-text {
+  font-size: 0.75em;
+}
+.act-damage {
+  background: var(--color-error, #d33);
+  color: #fff;
+}
+.act-heal {
+  background: var(--color-success, #1a7f37);
+  color: #fff;
+}
+.act-halve {
+  grid-column: 1 / -1;
+}
+
+.pad {
+  grid-area: pad;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pad-display {
+  flex: none;
+  height: clamp(40px, 13vh, 64px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 2px solid var(--color-border);
+  background: var(--color-background-body);
+}
+.pad-value {
+  font-size: clamp(22px, 8vh, 36px);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-primary);
+}
+.pad-placeholder {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+}
+.pad-keys {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 6px;
+}
+.key {
+  min-height: 40px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-background-card, #fff);
+  font-size: clamp(18px, 6vh, 26px);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-primary);
+}
+.key-sub {
+  font-size: clamp(14px, 4.5vh, 20px);
+  background: var(--color-background-secondary, rgba(0, 0, 0, 0.06));
+}
+
+.roll-result {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: clamp(18px, 6vh, 26px);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  animation: pop 0.25s ease-out;
+  white-space: nowrap;
+}
+.dice-face {
+  font-size: 1.4em;
+  line-height: 1;
+}
+@keyframes pop {
+  from { transform: scale(0.6); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .roll-result { animation: none; }
+  .lp-fill { transition: none; }
+}
+
+.drawer-body {
+  padding: 0 16px 16px;
+}
+.history {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.history li {
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+
+/* 縦置き：プレイヤー2人を上に並べ、テンキーを下に */
+@media (orientation: portrait) {
+  .duel-main {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas:
+      'left right'
+      'pad pad';
+  }
+  .lp {
+    font-size: clamp(32px, 11vw, 72px);
+  }
+  .player-actions {
+    flex: none;
+    grid-template-rows: 56px 44px;
+  }
+  .act { font-size: 16px; }
+  .key { font-size: 24px; }
+  .key-sub { font-size: 18px; }
+}
+
+/* 横置きでも高さが極端に低いときはバーの余白を詰める */
+@media (orientation: landscape) and (max-height: 360px) {
+  .duel { gap: 6px; padding-top: 6px; }
+  .player { padding: 8px; gap: 4px; }
+}
