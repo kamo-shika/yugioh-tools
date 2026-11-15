@@ -17,6 +17,9 @@ import {
   undoLp,
 } from './duel';
 import {useWakeLock} from './useWakeLock';
+import AnimatedLp from './AnimatedLp';
+import RollOverlay from './RollOverlay';
+import {isSoundOn, setSoundOn} from './sound';
 
 type RollEvent = Extract<DuelEvent, {kind: 'dice' | 'coin'}>;
 
@@ -47,6 +50,8 @@ export default function DuelTools({nav}: {nav: ReactNode}) {
   const [state, setState] = useState<DuelState>(load);
   const [input, setInput] = useState(0);
   const [lastRoll, setLastRoll] = useState<RollEvent | null>(null);
+  const [rolling, setRolling] = useState<RollEvent | null>(null);
+  const [sound, setSound] = useState(isSoundOn);
   const [confirmReset, setConfirmReset] = useState(false);
   const [historyOpen, setHistoryOpen] = useState(false);
   const [editing, setEditing] = useState<PlayerId | null>(null);
@@ -75,6 +80,7 @@ export default function DuelTools({nav}: {nav: ReactNode}) {
   const halveLp = (p: PlayerId) => setState(s => applyLp(s, p, halve(s.lp[p])));
 
   const pushRandom = (e: RollEvent) => {
+    setRolling(e);
     setLastRoll(e);
     setState(s => ({...s, log: [...s.log, e]}));
   };
@@ -117,6 +123,17 @@ export default function DuelTools({nav}: {nav: ReactNode}) {
       <header className="duel-bar">
         {nav}
         <div className="duel-bar-actions">
+          <button
+            type="button"
+            className="sound-toggle"
+            aria-label={sound ? '効果音をオフにする' : '効果音をオンにする'}
+            aria-pressed={sound}
+            onClick={() => {
+              setSoundOn(!sound);
+              setSound(!sound);
+            }}>
+            {sound ? '🔊' : '🔇'}
+          </button>
           <Button label="履歴" variant="ghost" onClick={() => setHistoryOpen(true)} />
           <Button label="戻す" variant="secondary" onClick={() => setState(undoLp)} isDisabled={!hasUndo} />
           <Button
@@ -144,7 +161,7 @@ export default function DuelTools({nav}: {nav: ReactNode}) {
             <span className="pad-value">
               {input ? fmt(input) : <span className="pad-placeholder">数値を入力</span>}
             </span>
-            {lastRoll && (
+            {lastRoll && !rolling && (
               <span className="roll-result" key={lastRoll.at}>
                 {lastRoll.kind === 'dice' ? (
                   <>
@@ -182,6 +199,8 @@ export default function DuelTools({nav}: {nav: ReactNode}) {
           onEditName={() => setEditing(1)}
         />
       </div>
+
+      {rolling && <RollOverlay key={rolling.at} roll={rolling} onClose={() => setRolling(null)} />}
 
       <Drawer isOpen={historyOpen} onOpenChange={setHistoryOpen} label="履歴" side="end" width={360}>
         <DrawerHeader title="履歴" onOpenChange={setHistoryOpen} />
@@ -234,7 +253,7 @@ function PlayerPanel({
       <button type="button" className="player-name" onClick={onEditName}>
         {name}
       </button>
-      <div className={`lp lp-${level}`}>{fmt(lp)}</div>
+      <AnimatedLp lp={lp} className={`lp lp-${level}`} />
       <div className="lp-bar" aria-hidden="true">
         <div className={`lp-fill lp-fill-${level}`} style={{width: `${ratio * 100}%`}} />
       </div>

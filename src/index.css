@@ -316,3 +316,174 @@ button {
   .duel { gap: 6px; padding-top: 6px; }
   .player { padding: 8px; gap: 4px; }
 }
+
+/* ===== 演出 ===== */
+.sound-toggle {
+  width: 40px;
+  height: 36px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  font-size: 20px;
+}
+
+.lp-wrap {
+  position: relative;
+}
+.lp-flash-damage {
+  animation: lp-shake 0.45s ease-out, lp-red 0.9s ease-out;
+}
+.lp-flash-heal {
+  animation: lp-green 0.9s ease-out;
+}
+@keyframes lp-shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(5px); }
+  60% { transform: translateX(-3px); }
+  80% { transform: translateX(2px); }
+}
+@keyframes lp-red {
+  0%, 60% { color: var(--color-error, #d33); }
+}
+@keyframes lp-green {
+  0%, 60% { color: var(--color-success, #1a7f37); }
+}
+.lp-delta {
+  position: absolute;
+  right: 4px;
+  top: -6px;
+  font-size: clamp(16px, 5vh, 24px);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+  animation: delta-float 1.2s ease-out forwards;
+}
+.lp-delta-damage { color: var(--color-error, #d33); }
+.lp-delta-heal { color: var(--color-success, #1a7f37); }
+@keyframes delta-float {
+  0% { opacity: 0; transform: translateY(8px) scale(0.8); }
+  15% { opacity: 1; transform: translateY(0) scale(1.1); }
+  70% { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-18px) scale(1); }
+}
+
+.roll-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background: rgba(0, 0, 0, 0.45);
+  animation: fade-in 0.15s ease-out;
+  perspective: 900px;
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+}
+.toss {
+  transform-style: preserve-3d;
+}
+.toss-go {
+  animation: toss 1.1s cubic-bezier(0.3, 0.6, 0.4, 1);
+}
+@keyframes toss {
+  0% { transform: translateY(0) scale(0.8); }
+  35% { transform: translateY(-60px) scale(1.15); }
+  70% { transform: translateY(0) scale(1); }
+  82% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+.cube {
+  --s: min(28vh, 140px);
+  width: var(--s);
+  height: var(--s);
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1.1s cubic-bezier(0.2, 0.7, 0.25, 1);
+}
+.cube-face {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  padding: 14%;
+  gap: 4%;
+  border-radius: 16%;
+  background: #fafafa;
+  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.12), inset 0 -6px 12px rgba(0, 0, 0, 0.08);
+  backface-visibility: hidden;
+}
+.cube-face span {
+  display: block;
+  border-radius: 50%;
+}
+.cube-face .pip {
+  background: #222;
+  margin: 12%;
+}
+.cube-face .pip-one {
+  background: #d22;
+  margin: -10%;
+}
+.cube-front  { transform: translateZ(calc(var(--s) / 2)); }
+.cube-back   { transform: rotateY(180deg) translateZ(calc(var(--s) / 2)); }
+.cube-right  { transform: rotateY(90deg) translateZ(calc(var(--s) / 2)); }
+.cube-left   { transform: rotateY(-90deg) translateZ(calc(var(--s) / 2)); }
+.cube-top    { transform: rotateX(90deg) translateZ(calc(var(--s) / 2)); }
+.cube-bottom { transform: rotateX(-90deg) translateZ(calc(var(--s) / 2)); }
+
+.coin {
+  --s: min(32vh, 160px);
+  width: var(--s);
+  height: var(--s);
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1.1s cubic-bezier(0.15, 0.6, 0.3, 1);
+}
+.coin-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(var(--s) * 0.45);
+  font-weight: 800;
+  backface-visibility: hidden;
+}
+.coin-front {
+  background: radial-gradient(circle at 35% 30%, #fff3b0, #e0b100 55%, #a57a00);
+  color: #6b4d00;
+  box-shadow: inset 0 0 0 6px rgba(120, 85, 0, 0.35);
+}
+.coin-back {
+  background: radial-gradient(circle at 35% 30%, #ffffff, #b9bec7 55%, #7c838f);
+  color: #3d434d;
+  box-shadow: inset 0 0 0 6px rgba(60, 65, 75, 0.35);
+  transform: rotateY(180deg);
+}
+
+.roll-label {
+  min-height: 1.2em;
+  font-size: clamp(28px, 10vh, 48px);
+  font-weight: 800;
+  color: #fff;
+  opacity: 0;
+  transform: scale(0.6);
+  transition: opacity 0.2s, transform 0.25s cubic-bezier(0.3, 1.6, 0.5, 1);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+.roll-label-show {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lp-flash-damage, .lp-flash-heal, .lp-delta, .toss-go { animation: none; }
+  .cube, .coin { transition: none; }
+}
