@@ -512,3 +512,209 @@ button {
   background: var(--color-background-body, #fff);
   color: var(--color-text-primary, #111);
 }
+
+/* ===== 一人回し（スマホ横置きを主に想定） ===== */
+.solo-main {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(168px, 22%) 1fr;
+  gap: 8px;
+}
+.solo-piles {
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 6px;
+}
+.solo-piles .act {
+  font-size: clamp(14px, 4.5vh, 18px);
+  white-space: nowrap;
+  padding: 0 4px;
+}
+.solo-piles .act:not(.act-draw) {
+  font-size: clamp(13px, 4vh, 16px);
+}
+.act-draw {
+  background: var(--color-text-primary);
+  color: var(--color-background-body);
+}
+.pile {
+  min-height: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: var(--color-background-card, #fff);
+  color: var(--color-text-primary);
+}
+.pile:active, .card-chip:active, .pile-list button:active {
+  transform: scale(0.96);
+  filter: brightness(0.92);
+}
+.pile-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+.pile-count {
+  font-size: clamp(18px, 6vh, 26px);
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+.pile-grave { background: var(--color-background-secondary, rgba(0, 0, 0, 0.06)); }
+.pile-banish { border-style: dashed; }
+
+.solo-board {
+  min-height: 0;
+  min-width: 0;
+  display: grid;
+  grid-template-rows: 1fr 1.1fr;
+  gap: 8px;
+}
+.solo-zone {
+  position: relative;
+  min-height: 0;
+  display: flex;
+  gap: 6px;
+  padding: 22px 8px 8px;
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior: contain;
+}
+.solo-field {
+  flex-wrap: wrap;
+  align-content: flex-start;
+  overflow-y: auto;
+  background: var(--color-background-secondary, rgba(0, 0, 0, 0.04));
+}
+.solo-zone-label {
+  position: absolute;
+  top: 3px;
+  left: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+.solo-empty {
+  align-self: center;
+  margin: auto;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+.card-chip {
+  flex: none;
+  width: clamp(64px, 11vw, 96px);
+  padding: 6px 5px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-background-card, #fff);
+  color: var(--color-text-primary);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: left;
+  display: flex;
+  align-items: flex-start;
+  overflow: hidden;
+}
+.card-chip-name {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  word-break: break-all;
+}
+.solo-hand .card-chip {
+  height: 100%;
+}
+.solo-hand .card-chip-name {
+  -webkit-line-clamp: 7;
+}
+.solo-field .card-chip {
+  height: calc(50% - 3px);
+  min-height: 52px;
+}
+.solo-field .card-chip-name {
+  -webkit-line-clamp: 4;
+}
+.card-chip-extra {
+  border-color: var(--color-text-secondary);
+  border-width: 2px;
+}
+
+.pile-list {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.pile-list button {
+  width: 100%;
+  min-height: 44px;
+  padding: 8px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-background-card, #fff);
+  color: var(--color-text-primary);
+  font-size: 15px;
+  text-align: left;
+}
+.move-grid {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.move-grid .act {
+  min-height: 52px;
+  font-size: 17px;
+}
+
+.import-steps {
+  list-style: decimal;
+  margin: 0;
+  padding-left: 1.4em;
+  color: var(--color-text-primary);
+  line-height: 1.7;
+}
+.import-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--color-text-primary);
+}
+.import-list {
+  list-style: disc;
+  margin: 6px 0 0;
+  padding-left: 1.2em;
+  font-size: 14px;
+  columns: 2;
+}
+.import-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+@media (orientation: portrait) {
+  .solo-main {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+  .solo-piles {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 56px);
+  }
+  .card-chip { width: 76px; max-height: 120px; }
+  .solo-hand .card-chip { max-height: 150px; }
+}
